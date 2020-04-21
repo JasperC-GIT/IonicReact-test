@@ -1,23 +1,53 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Tab1.css';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonRow, IonCol, IonCard, IonCardContent, IonImg, IonCardTitle, IonIcon, IonText } from '@ionic/react';
+import './stylesheet.css';
+import Reesbylogo from '../assets/img/Reesbylogo.png';
+import coffeeBeans from '../assets/img/coffeeBeans.jpeg';
+import { starOutline } from 'ionicons/icons';
+
 
 const Tab1: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader no-border>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <IonTitle>Notifications</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
+            <IonTitle size="large">Notifications</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+        <IonRow>
+          <IonCol>
+            <IonCard href="./reesby"> 
+            <IonIcon className="favourite" icon={starOutline} />
+              <IonImg src={Reesbylogo} />
+              <IonCardContent>
+                <IonCardTitle>
+                  Welcome To Reesby!
+                </IonCardTitle>
+                <IonText>Looking for a Job or to change your career?</IonText>
+              </IonCardContent>
+            </IonCard>
+          </IonCol>
+        </IonRow>
+        <IonRow>
+          <IonCol>
+            <IonCard href="./warehousecoffee">
+            <IonIcon className="favourite" icon={starOutline} />
+              <IonImg src={coffeeBeans} />
+              <IonCardContent>
+                <IonCardTitle>
+                  Warehouse coffee<br/> OPEN NOW!
+                </IonCardTitle>
+                <IonText>Come in and discounted coffee.</IonText>
+              </IonCardContent>
+            </IonCard>
+          </IonCol>
+        </IonRow>
       </IonContent>
     </IonPage>
   );

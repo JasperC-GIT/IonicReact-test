@@ -1,8 +1,11 @@
 {
+  "homepage": "http://JasperC-GIT.github.io/IonicReact-test",
   "name": "ionic-react-app",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@capacitor/core": "2.0.1",
+    "@capacitor/ios": "^2.0.1",
     "@ionic/react": "^5.0.7",
     "@ionic/react-router": "^5.0.7",
     "@testing-library/jest-dom": "^4.2.4",
@@ -23,6 +26,8 @@
     "typescript": "3.8.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -43,5 +48,9 @@
       "last 1 safari version"
     ]
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "devDependencies": {
+    "@capacitor/cli": "2.0.1",
+    "gh-pages": "^2.2.0"
+  }
 }
